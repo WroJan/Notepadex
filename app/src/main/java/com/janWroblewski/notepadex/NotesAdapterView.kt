@@ -16,6 +16,7 @@ class NotesAdapterView: RecyclerView.Adapter<ViewHolder>() {
         return ViewHolder(noteRow)
 
 
+
     }
 
     override fun getItemCount(): Int {
@@ -29,7 +30,6 @@ class NotesAdapterView: RecyclerView.Adapter<ViewHolder>() {
             noteTitle.setText(UserNotesBase.noteTitle[position])
             noteBody.setText(UserNotesBase.noteBody[position])
 
-        Toast.makeText(this,"fgfgfg" Toast)
 
 
 
@@ -37,7 +37,6 @@ class NotesAdapterView: RecyclerView.Adapter<ViewHolder>() {
        // removeTitleNote(position)
 
     }
-
 
 
 
