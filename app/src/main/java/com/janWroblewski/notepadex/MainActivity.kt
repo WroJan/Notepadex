@@ -1,5 +1,6 @@
 package com.janWroblewski.notepadex
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -20,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         add_new_note_float_btn.setOnClickListener {
 
             Toast.makeText(this, "Test", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, AddNewNote::class.java)
+            startActivity(intent)
+
 
         }
 
