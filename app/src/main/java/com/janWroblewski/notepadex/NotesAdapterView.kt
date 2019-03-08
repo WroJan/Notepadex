@@ -1,10 +1,10 @@
 package com.janWroblewski.notepadex
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import kotlinx.android.synthetic.main.note_row.view.*
 
 
@@ -17,10 +17,13 @@ class NotesAdapterView: RecyclerView.Adapter<ViewHolder>() {
 
 
 
+
+
     }
 
     override fun getItemCount(): Int {
         return UserNotesBase.noteTitle.size
+
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -30,13 +33,27 @@ class NotesAdapterView: RecyclerView.Adapter<ViewHolder>() {
             noteTitle.setText(UserNotesBase.noteTitle[position])
             noteBody.setText(UserNotesBase.noteBody[position])
 
+        holder.itemView.setOnClickListener {
+
+            removeTitleNote(position)
+            Log.d("tag","clicked")
+
+
+        }
 
 
 
 
-       // removeTitleNote(position)
+
+
+
+
+
+
 
     }
+
+
 
 
 
