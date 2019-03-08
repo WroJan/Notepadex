@@ -8,17 +8,13 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.note_row.view.*
 
 
-class NotesAdapterView: RecyclerView.Adapter<ViewHolder>() {
+class NotesAdapterView : RecyclerView.Adapter<ViewHolder>() {
+
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): ViewHolder {
-        val layoutInflater:LayoutInflater = LayoutInflater.from(viewGroup.context)
+        val layoutInflater: LayoutInflater = LayoutInflater.from(viewGroup.context)
         val noteRow: View = layoutInflater.inflate(R.layout.note_row, viewGroup, false)
         return ViewHolder(noteRow)
-
-
-
-
-
     }
 
     override fun getItemCount(): Int {
@@ -27,43 +23,22 @@ class NotesAdapterView: RecyclerView.Adapter<ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val noteTitle = holder.v.title_note_text_view
-            val noteBody = holder.v.body_note_text_view
+        val noteTitle = holder.v.title_note_text_view
+        val noteBody = holder.v.body_note_text_view
 
-            noteTitle.setText(UserNotesBase.noteTitle[position])
-            noteBody.setText(UserNotesBase.noteBody[position])
+        noteTitle.setText(UserNotesBase.noteTitle[position])
+        noteBody.setText(UserNotesBase.noteBody[position])
 
         holder.itemView.setOnClickListener {
 
             removeTitleNote(position)
-            Log.d("tag","clicked")
-
-
+            Log.d("tag", "clicked")
         }
 
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
 }
 
-
-
-
-class ViewHolder(val v: View): RecyclerView.ViewHolder(v) {
-
+class ViewHolder(val v: View) : RecyclerView.ViewHolder(v) {
 
 
 }
