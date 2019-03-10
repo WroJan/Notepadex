@@ -25,6 +25,7 @@ class AddNewNote : AppCompatActivity() {
 
             finish()
 
+
         }
     }
 
